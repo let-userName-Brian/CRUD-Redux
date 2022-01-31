@@ -1,13 +1,15 @@
-<mat-toolbar color="black">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span style="margin-left: 2rem;">My App</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar>
+<mat-drawer-container class="nav-container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <h3>Pages</h3>
+    <mat-divider></mat-divider>
+  </mat-drawer>
+
+  <mat-toolbar color="black" style="margin-top: auto; margin-bottom: auto">
+    <button mat-icon-button type="button" (click)="drawer.toggle()" class="icon"
+      aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span style="margin-left: 1rem">CRUD App</span>
+  </mat-toolbar>
+  <app-body></app-body>
+</mat-drawer-container>
