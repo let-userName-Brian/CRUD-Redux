@@ -26,10 +26,20 @@
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
+  color: white;
+  text-align: center;
 }
 
 h3{
   color: white;
   text-align: center;
   font-style: italic;
+}
+
+h2{
+  color: white;
+  text-align: center;
+  font-style: normal;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
 }

@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDividerModule } from '@angular/material/divider';
 import { BodyComponent } from './Weather/weather.component';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { TripsComponent } from './trips/trips.component';
+import { HotelsComponent } from './hotels/hotels.component';
+import { ItineraryComponent } from './itinerary/itinerary.component';
 
 
 @NgModule({
@@ -19,6 +22,9 @@ import {MatCardModule} from '@angular/material/card';
     AppComponent,
     NavbarComponent,
     BodyComponent,
+    TripsComponent,
+    HotelsComponent,
+    ItineraryComponent,
   ],
   imports: [
     BrowserModule,
