@@ -5,6 +5,8 @@
 
 .card {
   max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 8px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header-image {
@@ -18,5 +20,8 @@
 }
 
 .card-image{
-  background-position: center;
+  display: flex;
+  justify-content: center;
+  margin-top: .5rem;
+  border-radius: 15px;
 }
