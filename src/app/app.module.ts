@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { TripsComponent } from './trips/trips.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { ItineraryComponent } from './itinerary/itinerary.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { ItineraryComponent } from './itinerary/itinerary.component';
     MatIconModule,
     MatSidenavModule,
     MatDividerModule,
-    MatCardModule
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

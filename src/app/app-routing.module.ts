@@ -6,7 +6,7 @@ import { HotelsComponent } from './hotels/hotels.component';
 import { ItineraryComponent } from './itinerary/itinerary.component';
 
 const routes: Routes = [
-  { path: 'weather', component: BodyComponent },
+  { path: '', component: BodyComponent },
   { path: 'itinerary', component: ItineraryComponent },
   { path: 'trips', component: TripsComponent },
   { path: 'hotels', component: HotelsComponent },
