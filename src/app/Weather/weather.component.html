@@ -1,26 +1,28 @@
 <div class="body">
-
-  <mat-card class="card">
+  <mat-card class="card" *ngFor="let weather of weatherConditions">
     <mat-card-header>
-      <div mat-card-avatar class="header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      <div mat-card-avatar class="header-image" 
+      style="background-image: url({{weather.image}});"
+      ></div>
+      <mat-card-title>{{weather.city}}</mat-card-title>
+      <mat-card-subtitle>{{weather.country}}</mat-card-subtitle>
     </mat-card-header>
     <div class="card-image">
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-        alt="Photo of a Shiba Inu">
+      <img mat-card-image src={{weather.image}} alt={{weather.id}}>
     </div>
     <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
+      <div>
+        <p>{{weather.description}}</p>
+        <p>Temp: {{weather.temp}}</p>
+      </div>
+      <div>
+        <p>Wind Speed: {{weather.wind}}</p>
+        <p>Humidity: {{weather.humidity}}</p>
+      </div>
     </mat-card-content>
     <mat-card-actions class="buttons">
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
+      <button mat-button class="button-item" id={{weather.id}}>LIKE</button>
+      <button mat-button class="button-item" id={{weather.id}}>SHARE</button>
     </mat-card-actions>
   </mat-card>
-
 </div>
