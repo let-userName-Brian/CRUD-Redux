@@ -16,6 +16,11 @@ import { TripsComponent } from './trips/trips.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { ItineraryComponent } from './itinerary/itinerary.component';
 import { RouterModule } from '@angular/router';
+import { HotelService } from './Services/hotels.service';
+import { ItineraryService } from './Services/itinerary.service';
+import { TripsService } from './Services/trips.service';
+import { WeatherService } from './Services/weather.service';
+import { ApiService } from './Services/API.service';
 
 
 @NgModule({
@@ -38,7 +43,13 @@ import { RouterModule } from '@angular/router';
     MatDividerModule,
     MatCardModule,
   ],
-  providers: [],
+  providers: [
+    HotelService, 
+    ItineraryService, 
+    TripsService,
+    WeatherService,
+    ApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

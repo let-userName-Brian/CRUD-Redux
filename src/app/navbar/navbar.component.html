@@ -2,13 +2,13 @@
   <mat-drawer #drawer class="sidenav" mode="side">
     <h3>Pages</h3>
     <mat-divider></mat-divider>
-    <button><h2><a routerLink="">Weather</a></h2></button>
+    <button><h2><a routerLink="" [routerLinkActiveOptions]="{ exact: true}" routerLinkActive="active">Weather</a></h2></button>
     <mat-divider></mat-divider>
-    <button><h2><a routerLink="itinerary">Itinerary</a></h2></button>
+    <button><h2><a routerLink="itinerary" routerLinkActive="active">Itinerary</a></h2></button>
     <mat-divider></mat-divider>
-    <button><h2><a routerLink="trips">Trips</a></h2></button>
+    <button><h2><a routerLink="trips" routerLinkActive="active">Trips</a></h2></button>
     <mat-divider></mat-divider>
-    <button><h2><a routerLink="hotels">Hotels</a></h2></button>
+    <button><h2><a routerLink="hotels" routerLinkActive="active">Hotels</a></h2></button>
     <mat-divider></mat-divider>
   </mat-drawer>
   <mat-toolbar color="black" style="margin-top: auto; margin-bottom: auto">
