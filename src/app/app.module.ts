@@ -15,12 +15,13 @@ import { MatCardModule } from '@angular/material/card';
 import { TripsComponent } from './trips/trips.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { ItineraryComponent } from './itinerary/itinerary.component';
-import { RouterModule } from '@angular/router';
 import { HotelService } from './Services/hotels.service';
 import { ItineraryService } from './Services/itinerary.service';
 import { TripsService } from './Services/trips.service';
 import { WeatherService } from './Services/weather.service';
 import { ApiService } from './Services/API.service';
+import { HomeFormComponent } from './home-form/home-form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { ApiService } from './Services/API.service';
     TripsComponent,
     HotelsComponent,
     ItineraryComponent,
+    HomeFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { ApiService } from './Services/API.service';
     MatSidenavModule,
     MatDividerModule,
     MatCardModule,
+    FormsModule
   ],
   providers: [
     HotelService, 
