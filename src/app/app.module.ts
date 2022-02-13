@@ -22,7 +22,7 @@ import { WeatherService } from './Services/weather.service';
 import { ApiService } from './Services/API.service';
 import { HomeFormComponent } from './home-form/home-form.component';
 import { FormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,8 @@ import { FormsModule } from '@angular/forms';
     MatSidenavModule,
     MatDividerModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     HotelService, 

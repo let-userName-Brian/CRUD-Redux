@@ -1,50 +1,39 @@
-import { Component, Input, Output, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { TravelPlansInterface, TravelPlans } from '../TravelPlans.service';
-
+import { Component, OnInit } from '@angular/core';
+import { TravelPlans } from '../TravelPlans.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home-form',
   templateUrl: './home-form.component.html',
-  styleUrls: ['./home-form.component.css']
+  styleUrls: ['./home-form.component.css'],
+  providers: [TravelPlans]
 })
-export class HomeFormComponent {
-  @Output() travelPlans: TravelPlansInterface = {
-    name: '',
-    email: '',
-    location: '',
-    budget: '',
-    date: '',
-    duration: '',
+export class HomeFormComponent implements OnInit {
+  travelForm!: FormGroup;
+
+  constructor(private travelService: TravelPlans) { }
+
+  ngOnInit() {
+    this.travelForm = new FormGroup({
+      'travelFormInfo': new FormGroup({
+        "name": new FormControl(null),
+        "email": new FormControl(null),
+        "location": new FormControl(null),
+        "budget": new FormControl(null),
+        "date": new FormControl(null),
+        "duration": new FormControl(null),
+      })
+    });
+    this.travelForm.statusChanges.subscribe(
+      (status) => console.log(status)
+      );
   }
-  @ViewChild('f', { static: false }) form!: NgForm;
-  // travelPlans: TravelPlansInterface = {
-  //   name: '',
-  //   email: '',
-  //   location: '',
-  //   budget: '',
-  //   date: '',
-  //   duration: '',
-  // }
-  submitted = false;
-  
-  //constructor(private travelService: TravelPlans) {}
 
 
   onSubmit() {
-    this.submitted = true;
-    this.travelPlans = {
-      name: this.form.value.travelPlans.name,
-      email: this.form.value.travelPlans.email,
-      location: this.form.value.travelPlans.location,
-      budget: this.form.value.travelPlans.budget,
-      date: this.form.value.travelPlans.date,
-      duration: this.form.value.travelPlans.duration,
-    }
-    //this.travelService.addTravelPlans(this.travelPlans);
-    this.form.reset();
-    console.log('plans Obj', this.travelPlans);
+    this.travelService.addTravelPlans(this.travelForm.value);
+    this.travelForm.reset()
   }
 
-  
+
 }
