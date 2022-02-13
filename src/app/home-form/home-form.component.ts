@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TravelPlans } from '../TravelPlans.service';
+import { TravelPlans } from '../Services/TravelPlans.service';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
